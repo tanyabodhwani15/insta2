@@ -5,14 +5,14 @@ from streamlit_lottie import st_lottie
 from streamlit_option_menu import option_menu
 
 with st.sidebar:
-        selected = option_menu(
-                menu_title="Main Menu",  # required
-                options=["Home", "Main"],  # required
+    selected = option_menu(
+      menu_title="Main Menu",  # required
+      options=["Home", "Main"],  # required
                 
                
-                default_index=0,  # optional
-            )
-        return selected
+      default_index=0,  # optional
+    )
+return selected
     
     if selected == "Home":
       import streamlit as st
