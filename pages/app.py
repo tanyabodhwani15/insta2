@@ -14,7 +14,7 @@ with st.sidebar:
     )
 return selected
     
-    if selected == "Home":
+   if selected == "Home":
       import streamlit as st
       import base64
       import webbrowser
