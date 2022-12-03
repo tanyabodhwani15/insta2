@@ -4,7 +4,7 @@ import requests
 from streamlit_lottie import st_lottie
 from streamlit_option_menu import option_menu
 
- with st.sidebar:
+with st.sidebar:
         selected = option_menu(
                 menu_title="Main Menu",  # required
                 options=["Home", "Main"],  # required
