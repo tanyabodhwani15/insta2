@@ -2,6 +2,47 @@ import streamlit as st
 import pickle
 import requests
 from streamlit_lottie import st_lottie
+from streamlit_option_menu import option_menu
+
+ with st.sidebar:
+            selected = option_menu(
+                menu_title="Main Menu",  # required
+                options=["Home", "Main"],  # required
+                
+               
+                default_index=0,  # optional
+            )
+        return selected
+    
+    if selected == "Home":
+      import streamlit as st
+      import base64
+      import webbrowser
+      import requests
+      from streamlit_lottie import st_lottie
+
+
+   def load_lottieurl(url: str):
+      r = requests.get(url)
+   if r.status_code != 200:
+      return None
+   return r.json()
+
+
+   lottie_animation1 = 'https://assets8.lottiefiles.com/private_files/lf30_5jrklsmp.json'
+   lottie123 = load_lottieurl(lottie_animation1)
+   st.title("WELCOME TO MY WEB APP")
+   st.subheader("INSTAGRAM REACH ANALYSIS")
+   st.markup("giphy.gif")
+   st_lottie(lottie123, key='hello')
+
+
+   url = 'https://tanyabodhwani15-insta3-pagesapp-skazw5.streamlit.app/'
+
+   if st.button('Click Here For Prediction'):
+     webbrowser.open_new_tab(url)
+   if selected == "Projects":
+     st.title(f"You have selected {selected}")
 
 
 model = pickle.load(open('Model.pkl', 'rb'))
